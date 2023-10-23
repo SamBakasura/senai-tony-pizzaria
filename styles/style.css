@@ -17,8 +17,7 @@ body{
 }
 
 .link-home{
-    background-color: yellow;
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +28,7 @@ body{
     bottom: 0;
     font-size: 80px;
     transform: translateX(-50%) rotate(90deg);
+    animation: pulando 2s alternate infinite;
 }
 
 section{
@@ -38,4 +38,14 @@ section{
 
 .linha{
     border-bottom: 2px solid var(--cor-primaria);
+}
+@keyframes pulando{
+    0%{
+        transform: translate(-50%) rotate(90deg) scale(1);
+        color: var(--cor-secundaria);
+    }
+    100%{
+        transform: translate(-50%) rotate(90deg) scale(0.75);
+        color: var(--cor-primaria);
+    }
 }
